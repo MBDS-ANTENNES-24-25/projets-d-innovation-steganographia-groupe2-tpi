@@ -1,0 +1,42 @@
+@reference '@/index.css';
+
+.menu-navigation {
+  @apply bg-white/25 backdrop-blur-xl border-b border-slate-300/30 px-4 sm:px-8;
+}
+
+.menu-container {
+  @apply flex gap-0 max-w-full overflow-x-auto;
+}
+
+.menu-item {
+  @apply bg-transparent border-none py-3 px-4 sm:px-6 sm:py-4 flex items-center gap-2 cursor-pointer text-xs sm:text-sm font-medium text-gray-600 border-b-[3px] border-transparent transition-all duration-300 ease-in-out whitespace-nowrap relative hover:text-gray-800 hover:bg-white/20;
+}
+
+.menu-item.active {
+  @apply text-gray-700 border-b-transparent relative bg-gradient-to-br from-silver-blue-50 to-gray-100;
+}
+
+.menu-item.active::after {
+  @apply content-[''] absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-br from-silver-blue-800 to-gray-600;
+}
+
+.menu-label {
+  font-weight: inherit;
+}
+
+/* Scrollbar styling for menu container */
+.menu-container::-webkit-scrollbar {
+  @apply h-0;
+}
+
+.menu-container::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+  @apply bg-slate-gray-400 rounded-2xl;
+}
+
+.menu-container::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-gray-500;
+}

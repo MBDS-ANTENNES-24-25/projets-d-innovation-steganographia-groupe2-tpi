@@ -1,0 +1,146 @@
+@reference '@/index.css';
+
+.input-group {
+  @apply mb-6;
+}
+
+.input-label {
+  @apply block text-gray-700 text-sm font-medium mb-2;
+}
+
+.required-asterisk {
+  @apply text-red-500 ml-1;
+}
+
+.input-field {
+  @apply block w-full border bg-gray-100 border-silver-blue-300 rounded-lg p-3 text-gray-800 text-sm transition-all duration-300 ease-in-out shadow-inner;
+}
+
+.input-field.error {
+  @apply border-red-500;
+}
+
+.input-field:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.input-field:focus:not(:disabled) {
+  @apply outline-none border bg-gray-50 border-silver-blue-500 shadow-lg shadow-gray-400/30;
+}
+
+.input-field::placeholder {
+  @apply text-gray-600;
+}
+
+/* Hover effect for non-disabled inputs */
+.input-field:hover:not(:disabled) {
+  @apply border border-silver-blue-600;
+}
+
+/* TODO: manage input file style */
+
+/* Select Field Styles */
+.select-field {
+  @apply cursor-pointer appearance-none bg-no-repeat pr-10;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+}
+
+/* Textarea Field Styles */
+.textarea-field {
+  @apply min-h-[80px];
+  resize: vertical ;
+}
+
+/* Fieldset Styles for Radio and Checkbox Groups */
+.fieldset {
+  @apply border-none p-0 m-0;
+}
+
+.fieldset .input-label {
+  @apply mb-3 font-semibold;
+}
+
+/* Radio Group Styles */
+.radio-group {
+  @apply flex flex-col gap-3 md:gap-2;
+}
+
+.radio-item {
+  @apply flex flex-col items-start py-1 md:flex-row md:items-center md:py-0 gap-2;
+}
+
+.radio-input {
+  @apply size-[1rem] cursor-pointer;
+  accent-color: rgba(113, 128, 150, 0.8);
+}
+
+.radio-input:checked {
+  accent-color: rgba(113, 128, 150, 1);
+}
+
+.radio-input:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.radio-label {
+  @apply text-gray-700 text-sm font-medium cursor-pointer;
+  user-select: none;
+}
+
+.radio-input:disabled + .radio-label {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.radio-label {
+  @apply text-gray-700 text-sm font-medium cursor-pointer;
+  user-select: none;
+}
+
+/* Checkbox Group Styles */
+.checkbox-group {
+  @apply flex flex-col gap-3 md:gap-2;
+}
+
+.checkbox-item {
+  @apply flex flex-col items-start py-1 md:flex-row md:items-center md:py-0 gap-2;
+}
+
+.checkbox-input {
+  @apply w-[1rem] h-[1rem] cursor-pointer;
+  accent-color: rgba(113, 128, 150, 0.8);
+}
+
+.checkbox-input:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.checkbox-label {
+  @apply text-gray-700 text-sm font-medium cursor-pointer;
+  user-select: none;
+}
+
+.checkbox-input:disabled + .checkbox-label {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Error state (optional) */
+.input-group.error .input-field,
+.input-group.error .select-field,
+.input-group.error .textarea-field {
+  @apply border border-red-500;
+}
+
+/* Success state (optional) */
+.input-group.success .input-field,
+.input-group.success .select-field,
+.input-group.success .textarea-field {
+  border-color: rgba(34, 197, 94, 0.6);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.15);
+}
+
+/* Error message styling */
+.error-message {
+  @apply block text-red-500 text-xs mt-1 font-medium;
+}

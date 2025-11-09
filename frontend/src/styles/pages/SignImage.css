@@ -1,0 +1,336 @@
+@reference '@/index.css';
+
+/* ============================================
+   SignImage - Style Moderne
+   ============================================ */
+
+/* Card Glassmorphic */
+.glassmorphic-card {
+  @apply backdrop-blur-lg bg-white/70 dark:bg-gray-800/70;
+  @apply border border-white/20 dark:border-gray-700/30;
+  @apply rounded-2xl shadow-2xl;
+  @apply p-6 lg:p-8;
+  @apply transition-all duration-300 ease-out;
+  @apply relative overflow-hidden;
+}
+
+/* Error Message */
+[role="alert"] {
+  @apply rounded-xl backdrop-blur-sm border-2 shadow-lg;
+  @apply p-4 mb-4 text-sm;
+  @apply transition-all duration-300;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+[role="alert"]:has(.text-red-500) {
+  @apply text-red-500 border-red-500 bg-red-50 dark:bg-gray-800 dark:text-red-400;
+}
+
+[role="alert"]:has(.text-green-500) {
+  @apply text-green-500 border-green-500 bg-green-50 dark:bg-gray-800 dark:text-green-400;
+}
+
+/* Preview Container */
+.preview-container {
+  @apply mb-4 p-4 rounded-xl;
+  @apply bg-white/50 dark:bg-gray-700/50;
+  @apply border border-gray-200/50 dark:border-gray-600/50;
+  @apply shadow-md;
+  @apply transition-all duration-300;
+}
+
+.preview-header {
+  @apply flex items-center justify-between mb-3;
+  @apply pb-3 border-b border-gray-200/50 dark:border-gray-600/50;
+}
+
+.preview-header h3 {
+  @apply text-lg font-semibold text-gray-800 dark:text-gray-200;
+}
+
+.preview-header button {
+  @apply text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300;
+  @apply text-sm font-medium;
+  @apply px-3 py-1.5 rounded-lg;
+  @apply transition-all duration-200;
+  @apply bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50;
+  @apply hover:bg-red-100 dark:hover:bg-red-900/30;
+  @apply shadow-sm hover:shadow-md;
+}
+
+.preview-image {
+  @apply w-full max-w-full h-auto rounded-lg;
+  @apply shadow-lg;
+  @apply border border-gray-200/50 dark:border-gray-600/50;
+  @apply transition-all duration-300;
+}
+
+.preview-image:hover {
+  @apply shadow-xl;
+  @apply transform scale-[1.01];
+}
+
+/* Form Container */
+.form-container {
+  @apply mt-4 p-4 rounded-xl;
+  @apply bg-white/50 dark:bg-gray-700/50;
+  @apply border border-gray-200/50 dark:border-gray-600/50;
+  @apply shadow-md;
+  @apply transition-all duration-300;
+}
+
+.form-container .input-group {
+  @apply mb-4;
+}
+
+.form-container .input-group .input-label {
+  @apply text-gray-700 dark:text-gray-300 font-medium mb-2;
+}
+
+.form-container .input-group .textarea-field {
+  @apply w-full px-4 py-3 rounded-xl;
+  @apply bg-white/80 dark:bg-gray-800/80;
+  @apply border border-gray-300/50 dark:border-gray-600/50;
+  @apply text-gray-800 dark:text-gray-200;
+  @apply transition-all duration-300 ease-out;
+  @apply shadow-sm;
+  @apply resize-y;
+}
+
+.form-container .input-group .textarea-field:focus {
+  @apply outline-none ring-2 ring-silver-blue-400/50 dark:ring-silver-blue-500/50;
+  @apply border-silver-blue-400 dark:border-silver-blue-500;
+  @apply shadow-md;
+}
+
+.form-container .input-group .textarea-field::placeholder {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+/* Button Styling */
+.form-container .btn {
+  @apply w-full py-3 rounded-xl;
+  @apply font-medium;
+  @apply transition-all duration-300 ease-out;
+  @apply shadow-md;
+  @apply relative overflow-hidden;
+}
+
+.form-container .btn:hover:not(:disabled) {
+  @apply transform scale-[1.02];
+  @apply shadow-lg;
+}
+
+.form-container .btn:active:not(:disabled) {
+  @apply transform scale-[1];
+}
+
+.form-container .btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Signed Image Container */
+.signed-image-container {
+  @apply mt-4 p-6 rounded-2xl;
+  @apply relative overflow-hidden;
+  @apply bg-gradient-to-br from-green-50/80 via-emerald-50/60 to-blue-50/80 dark:from-green-900/40 dark:via-emerald-900/30 dark:to-blue-900/40;
+  @apply border-2 border-green-300/60 dark:border-green-700/60;
+  @apply shadow-2xl;
+  @apply transition-all duration-500 ease-out;
+  animation: fadeInUp 0.5s ease-out, shimmer 3s ease-in-out infinite;
+}
+
+.signed-image-container::before {
+  content: '';
+  @apply absolute inset-0;
+  @apply bg-gradient-to-r from-transparent via-white/10 to-transparent;
+  @apply -translate-x-full;
+  animation: shimmer-slide 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    box-shadow: 0 10px 40px rgba(34, 197, 94, 0.2), 0 0 0 0 rgba(34, 197, 94, 0.1);
+  }
+  50% {
+    box-shadow: 0 10px 40px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2);
+  }
+}
+
+@keyframes shimmer-slide {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+.signed-image-container:hover {
+  @apply transform scale-[1.01];
+  @apply border-green-400/80 dark:border-green-600/80;
+  box-shadow: 0 20px 60px rgba(34, 197, 94, 0.3), 0 0 40px rgba(34, 197, 94, 0.15);
+}
+
+.signed-image-container h3 {
+  @apply text-xl font-bold mb-4;
+  @apply text-gray-800 dark:text-gray-100;
+  @apply pb-4 border-b-2 border-green-300/40 dark:border-green-700/40;
+  @apply relative;
+  background: linear-gradient(135deg, #059669 0%, #0d9488 50%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .signed-image-container h3 {
+  background: linear-gradient(135deg, #4ade80 0%, #2dd4bf 50%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.download-container {
+  @apply mb-4;
+  @apply relative;
+}
+
+.download-container .btn {
+  @apply inline-flex items-center justify-center gap-3;
+  @apply px-8 py-4 rounded-xl;
+  @apply font-semibold text-base;
+  @apply transition-all duration-300 ease-out;
+  @apply shadow-lg;
+  @apply relative overflow-hidden;
+  @apply bg-gradient-to-r from-silver-blue-500 via-silver-blue-600 to-silver-blue-700;
+  @apply text-white;
+  @apply border-2 border-silver-blue-400/50;
+  @apply hover:shadow-2xl;
+}
+
+.download-container .btn::before {
+  content: '';
+  @apply absolute inset-0;
+  @apply bg-gradient-to-r from-transparent via-white/20 to-transparent;
+  @apply -translate-x-full;
+  @apply transition-transform duration-700;
+}
+
+.download-container .btn:hover::before {
+  @apply translate-x-full;
+}
+
+.download-container .btn:hover {
+  @apply transform scale-105 translate-y-[-2px];
+  @apply shadow-2xl;
+  @apply bg-gradient-to-r from-silver-blue-600 via-silver-blue-700 to-silver-blue-800;
+  @apply border-silver-blue-300/70;
+  box-shadow: 0 10px 30px rgba(99, 169, 211, 0.4), 0 0 20px rgba(99, 169, 211, 0.2);
+}
+
+.download-container .btn:active {
+  @apply transform scale-100 translate-y-0;
+}
+
+.download-container .btn::after {
+  content: '↓';
+  @apply ml-2 text-lg;
+  @apply transition-transform duration-300;
+  @apply inline-block;
+}
+
+.download-container .btn:hover::after {
+  @apply transform translate-y-1;
+}
+
+.signed-image-container .preview-image {
+  @apply mt-4;
+  @apply border-2 border-green-400/60 dark:border-green-600/60;
+  @apply shadow-xl;
+  @apply rounded-xl;
+  @apply transition-all duration-300;
+  @apply relative;
+  @apply overflow-hidden;
+  border-width: 3px;
+}
+
+.signed-image-container .preview-image::after {
+  content: '✓ Signée';
+  @apply absolute top-2 right-2;
+  @apply px-3 py-1.5 rounded-lg;
+  @apply bg-green-500/90 dark:bg-green-600/90;
+  @apply text-white text-xs font-bold;
+  @apply backdrop-blur-sm;
+  @apply shadow-lg;
+  @apply border border-white/30;
+}
+
+.signed-image-container .preview-image:hover {
+  @apply transform scale-[1.02];
+  @apply shadow-2xl;
+  @apply border-green-500/80 dark:border-green-500/80;
+  box-shadow: 0 20px 50px rgba(34, 197, 94, 0.3), 0 0 30px rgba(34, 197, 94, 0.2);
+}
+
+/* Loading State */
+.flex.justify-center.items-center.py-8 {
+  @apply gap-3 text-gray-600 dark:text-gray-400 font-medium;
+}
+
+/* Animation on Load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.preview-container,
+.form-container,
+.signed-image-container {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .glassmorphic-card {
+    @apply p-4;
+  }
+  
+  .preview-container,
+  .form-container,
+  .signed-image-container {
+    @apply p-3;
+  }
+  
+  .preview-image {
+    @apply rounded-md;
+  }
+  
+  .download-container .btn {
+    @apply w-full justify-center;
+  }
+}
+
+/* File Upload Integration */
+.glassmorphic-card > .file-upload-container {
+  @apply mb-4;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a.btn,
+.preview-header button {
+  @apply transition-all duration-200;
+}
+
+/* Focus states */
+button:focus-visible,
+a.btn:focus-visible {
+  @apply outline-none ring-2 ring-silver-blue-400/50 dark:ring-silver-blue-500/50;
+  @apply ring-offset-2 ring-offset-white dark:ring-offset-gray-800;
+}

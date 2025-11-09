@@ -1,0 +1,12 @@
+export { default as Login } from './Login';
+export { default as Register } from './Register';
+export { default as Dashboard } from './Dashboard';
+export { default as Profile } from './Profile';
+export { default as SignImage } from './SignImage';
+export { default as VerifyImage } from './VerifyImage';
+export { default as MySignatures } from './MySignatures';
+export { default as MyVerifications } from './MyVerifications';
+export { default as GoogleCallback } from './GoogleCallback';
+export { default as ConfirmEmail } from './ConfirmEmail';
+export { default as ForgotPassword } from './ForgotPassword';
+export { default as ResetPassword } from './ResetPassword';

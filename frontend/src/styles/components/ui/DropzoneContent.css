@@ -1,0 +1,32 @@
+@reference '@/index.css';
+
+/* Upload icon */
+.upload-icon {
+  @apply flex justify-center items-center text-silver-blue-800 text-6xl mb-4;
+}
+
+.upload-icon.animate {
+  @apply animate-bounce
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+
+/* Dropzone text */
+.dropzone-text {
+    @apply text-lg font-semibold text-gray-700 m-0;
+}
+
+.dropzone-subtext {
+    @apply text-sm text-gray-500 m-0;
+}

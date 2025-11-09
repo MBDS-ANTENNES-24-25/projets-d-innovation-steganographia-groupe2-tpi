@@ -1,0 +1,66 @@
+@reference '@/index.css';
+
+/* ConfirmBox Modal Styles */
+.confirm-box-content {
+  @apply p-0;
+}
+
+/* Header with icon */
+.confirm-box-header {
+  @apply flex items-center justify-center px-6 py-1;
+}
+
+.confirm-box-icon-container {
+  @apply size-16 rounded-full flex items-center justify-center mb-2;
+}
+
+.confirm-box-icon {
+  @apply size-8;
+}
+
+/* Type-specific styles for header and buttons */
+.confirm-box-default .confirm-box-icon-container {
+  @apply bg-blue-500/10 backdrop-blur-sm border border-blue-500/20;
+}
+
+.confirm-box-default .confirm-box-icon {
+  @apply text-blue-500;
+}
+
+.confirm-box-danger .confirm-box-icon-container {
+  @apply bg-red-500/10 backdrop-blur-sm border border-red-500/20;
+}
+
+.confirm-box-danger .confirm-box-icon {
+  @apply text-red-500;
+}
+
+.confirm-box-warning .confirm-box-icon-container {
+  @apply bg-yellow-500/10 backdrop-blur-sm border border-yellow-500/20;
+}
+
+.confirm-box-warning .confirm-box-icon {
+  @apply text-yellow-500;
+}
+
+.confirm-box-success .confirm-box-icon-container {
+  @apply bg-green-500/10 backdrop-blur-sm border border-green-500/20;
+}
+
+.confirm-box-success .confirm-box-icon {
+  @apply text-green-500;
+}
+
+/* Body content */
+.confirm-box-body {
+  @apply text-center p-0 px-6 pb-4;
+}
+
+.confirm-box-message {
+  @apply text-gray-700 text-sm leading-relaxed;
+}
+
+/* Action buttons */
+.confirm-box-actions {
+  @apply flex-col-reverse sm:flex-row  sm:flex gap-4 justify-center p-4;
+}

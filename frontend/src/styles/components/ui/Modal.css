@@ -1,0 +1,72 @@
+@reference '@/index.css';
+
+/* Modal Overlay */
+.modal-overlay {
+  @apply fixed inset-0 bg-silver-blue-100/25 backdrop-blur-lg z-50 flex items-center justify-center;
+}
+
+/* Modal Container */
+.modal-container {
+  @apply !px-3 !pt-4 !pb-3;
+}
+
+/* Modal Header */
+.modal-header {
+  @apply flex items-center justify-between p-4 border-b border-gray-400/40;
+}
+
+.modal-title {
+  @apply text-lg font-semibold text-gray-800;
+}
+
+/* Close Button */
+.modal-close-button {
+  @apply p-2 rounded-full bg-transparent border-none cursor-pointer transition-colors duration-150 ease-in-out;
+}
+
+.modal-close-button:hover {
+  @apply bg-gray-300;
+}
+
+.modal-close-icon {
+  @apply w-5 h-5 text-gray-500;
+}
+
+/* Modal Content */
+.modal-content {
+  @apply overflow-y-auto max-h-[calc(90vh-80px)] p-4;
+}
+
+/* Animation classes for entrance/exit */
+.modal-enter {
+  @apply opacity-0 scale-95;
+}
+
+.modal-enter-active {
+  @apply opacity-100 scale-100 ease-in-out duration-300;
+}
+
+.modal-exit {
+  @apply opacity-100 scale-100 duration-300;
+}
+
+.modal-exit-active {
+  @apply opacity-0 scale-95 ease-in-out duration-300;
+}
+
+/* Shake animation for static backdrop */
+.modal-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

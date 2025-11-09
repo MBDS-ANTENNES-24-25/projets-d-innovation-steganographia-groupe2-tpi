@@ -1,0 +1,65 @@
+@reference '@/index.css';
+
+/* Auth Container */
+.auth-container {
+  @apply relative h-screen max-h-screen flex items-start sm:items-center justify-center overflow-y-auto py-8 sm:py-0;
+  /* @apply overflow-hidden; */
+}
+
+/* Auth Content */
+.auth-content {
+  @apply relative z-10 w-full max-w-2xl p-8;
+}
+
+/* Auth Form */
+.auth-form {
+  @apply text-center;
+}
+
+.auth-form h2 {
+  @apply text-gray-600 text-2xl font-semibold;
+}
+
+.auth-subtitle {
+  @apply text-gray-500 text-sm mb-8;
+}
+
+/* Google Auth Button */
+.google-auth-btn {
+  @apply w-full bg-white/90 border border-slate-300/40 rounded-xl p-4 text-base font-medium text-gray-700 cursor-pointer transition-all duration-300 flex items-center justify-center gap-3 mb-6 backdrop-blur-sm hover:bg-white -translate-y-0.5 shadow-lg hover:border-slate-300/60;
+}
+
+.google-icon {
+  @apply flex items-center justify-center;
+}
+
+/* Divider */
+.divider {
+  @apply relative mx-0 my-6 text-center;
+}
+
+.divider::before {
+  @apply content-[''] absolute top-1/2 left-0 right-0 h-px bg-gray-400/40;
+}
+
+.divider span {
+  @apply bg-white/90 text-silver-blue-950 border border-gray-400/40 rounded-lg text-sm px-4 py-1 relative z-10;
+}
+
+/* Auth Footer */
+.auth-footer {
+  @apply text-center mt-6;
+}
+
+.auth-footer p {
+  @apply text-gray-500 text-sm mb-2;
+}
+
+.link {
+  @apply text-gray-600 font-medium cursor-pointer transition-colors duration-300 hover:text-gray-800 hover:underline;
+}
+
+/* Success State */
+.auth-form .text-green-600 h2 {
+  @apply text-green-600;
+}

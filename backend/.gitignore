@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VSCode
+.vscode/
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Logs
+*.log
+
+# Environnements
+.env
+.env.*
+
+# Migrations (si vous utilisez Alembic)
+migrations/
+
+# Base de données SQLite
+*.sqlite3
+*.db
+
+# MacOS
+.DS_Store
+
+# mypy
+.mypy_cache/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+
+# Base de données Postgres
+*.pgsql
+*.psql
+*.dump
+*.sql
+
+# FastAPI static files (si générés)
+static/

@@ -1,0 +1,24 @@
+@reference '@/index.css';
+
+/* Loading spinner */
+.box-spinner {
+  @apply text-white size-6;
+  animation: spin 1s linear infinite;
+}
+
+.box-spinner-circle {
+  opacity: 0.25;
+}
+
+.box-spinner-path {
+  opacity: 0.75;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

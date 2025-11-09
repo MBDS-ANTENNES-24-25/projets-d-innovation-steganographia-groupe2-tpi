@@ -1,0 +1,20 @@
+@reference '@/index.css';
+
+/* Overlay global pour le drag & drop sur toute la page */
+.global-drag-overlay {
+  @apply fixed inset-0 bg-silver-blue-200/10 backdrop-blur-sm z-[9999] flex items-center justify-center border-3 border-dashed border-silver-blue-800 box-border;
+}
+
+
+/* Zone de drag and drop */
+.dropzone {
+  @apply border-2 border-dashed border-gray-300 rounded-xl p-15 text-center cursor-pointer transition-all duration-300 bg-silver-blue-50 mb-5;
+}
+
+.dropzone:hover {
+  @apply border-silver-blue-500 bg-silver-blue-100;
+}
+
+.dropzone.drag-active {
+  @apply border-silver-blue-800 bg-silver-blue-200 scale-[1.02];
+}

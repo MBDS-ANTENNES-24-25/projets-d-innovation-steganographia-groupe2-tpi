@@ -1,0 +1,239 @@
+@reference '@/index.css';
+
+/* ============================================
+   MySignatures - Style Moderne
+   ============================================ */
+
+/* Card Glassmorphic */
+.glassmorphic-card {
+  @apply backdrop-blur-lg bg-white/70 dark:bg-gray-800/70;
+  @apply border border-white/20 dark:border-gray-700/30;
+  @apply rounded-2xl shadow-2xl;
+  @apply p-6 lg:p-8;
+  @apply transition-all duration-300 ease-out;
+  @apply relative overflow-hidden;
+}
+
+/* Header Section */
+.signatures-header {
+  @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4;
+  @apply pb-4 border-b border-gray-200/50 dark:border-gray-700/50;
+}
+
+.signatures-header h2 {
+  @apply text-2xl font-bold text-gray-800 dark:text-gray-200;
+}
+
+/* Table Container */
+.signatures-list {
+  @apply relative;
+}
+
+/* Search Bar */
+.search-bar-container {
+  @apply mb-4 flex flex-col sm:flex-row sm:items-center gap-3;
+}
+
+.search-bar-container .search-input {
+  @apply flex-1;
+}
+
+.search-bar-container .search-input .input-field {
+  @apply w-full px-4 py-3 rounded-xl;
+  @apply bg-white/80 dark:bg-gray-700/80 border border-gray-300/50 dark:border-gray-600/50;
+  @apply text-gray-800 dark:text-gray-200;
+  @apply transition-all duration-300 ease-out;
+  @apply shadow-sm;
+}
+
+.search-bar-container .search-input .input-field:focus {
+  @apply outline-none ring-2 ring-silver-blue-400/50 dark:ring-silver-blue-500/50;
+  @apply border-silver-blue-400 dark:border-silver-blue-500;
+  @apply shadow-md;
+}
+
+.search-bar-container .search-input .input-field::placeholder {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+.search-results-count {
+  @apply text-sm font-medium text-gray-600 dark:text-gray-400;
+  @apply px-3 py-2 rounded-lg;
+  @apply bg-silver-blue-50/50 dark:bg-silver-blue-900/30;
+  @apply border border-silver-blue-200/50 dark:border-silver-blue-700/50;
+  @apply whitespace-nowrap;
+}
+
+.no-results {
+  @apply text-center py-8 text-gray-500 dark:text-gray-400;
+}
+
+.signatures-list .overflow-x-auto {
+  @apply rounded-xl overflow-hidden shadow-inner bg-white/40 dark:bg-black/20;
+}
+
+/* Table Styling */
+.signatures-list table {
+  @apply w-full border-collapse relative;
+}
+
+/* Table Header */
+.signatures-list thead {
+  @apply relative;
+}
+
+.signatures-list thead tr {
+  @apply relative z-10 border-b-2 border-silver-blue-300/30 dark:border-silver-blue-500/40;
+  @apply bg-silver-blue-50/50 dark:bg-silver-blue-900/20;
+  @apply backdrop-blur-sm;
+}
+
+.signatures-list thead th {
+  @apply text-left p-4 font-bold text-sm uppercase tracking-wider;
+  @apply text-gray-700 dark:text-gray-200;
+  @apply transition-colors duration-200;
+}
+
+/* Table Body */
+.signatures-list tbody tr {
+  @apply relative border-b border-gray-200/30 dark:border-gray-700/30;
+  @apply transition-all duration-300 ease-out;
+  @apply hover:bg-silver-blue-50/30 dark:hover:bg-silver-blue-900/20;
+  @apply hover:shadow-md;
+}
+
+.signatures-list tbody td {
+  @apply p-4 relative z-10 text-gray-700 dark:text-gray-300;
+  @apply transition-colors duration-200;
+}
+
+/* UUID Code Styling */
+.signatures-list tbody td code {
+  @apply text-xs font-mono px-3 py-1.5 rounded-lg inline-block;
+  @apply transition-all duration-200;
+  @apply bg-gray-100 dark:bg-gray-700 border border-gray-300/50 dark:border-silver-blue-500/20;
+  @apply text-gray-800 dark:text-gray-200;
+  @apply shadow-sm;
+}
+
+.signatures-list tbody tr:hover td code {
+  @apply transform scale-105 shadow-md;
+  @apply bg-gray-200 dark:bg-gray-600;
+}
+
+/* Download Link */
+.signatures-list tbody td a {
+  @apply inline-flex items-center gap-2 text-sm font-medium;
+  @apply px-4 py-2 rounded-lg;
+  @apply transition-all duration-300 ease-out;
+  @apply relative overflow-hidden;
+  @apply bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700/50;
+  @apply text-blue-600 dark:text-blue-400;
+  @apply shadow-sm;
+}
+
+.signatures-list tbody td a:hover {
+  @apply transform scale-105;
+  @apply relative z-10 shadow-lg;
+  @apply bg-blue-100 dark:bg-blue-900/50;
+  @apply border-blue-300 dark:border-blue-600;
+}
+
+.signatures-list tbody td a:active {
+  @apply transform scale-100;
+}
+
+/* Empty State */
+.signatures-list + .text-center {
+  @apply py-12 px-4;
+}
+
+/* Loading State */
+.flex.justify-center.items-center.py-8 {
+  @apply gap-3 text-gray-600 dark:text-gray-400 font-medium;
+}
+
+/* Error Message */
+[role="alert"] {
+  @apply rounded-xl backdrop-blur-sm border-2 shadow-lg;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .signatures-list thead th,
+  .signatures-list tbody td {
+    @apply p-2 text-xs;
+  }
+  
+  .signatures-list thead th {
+    @apply text-xs;
+  }
+  
+  .signatures-list tbody td code {
+    @apply text-xs px-2 py-1;
+  }
+  
+  .signatures-list tbody td a {
+    @apply px-2 py-1 text-xs;
+  }
+}
+
+/* Smooth Scroll */
+.signatures-list .overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 169, 211, 0.3) transparent;
+}
+
+.signatures-list .overflow-x-auto::-webkit-scrollbar {
+  @apply h-2;
+}
+
+.signatures-list .overflow-x-auto::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.signatures-list .overflow-x-auto::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-silver-blue-300/30 transition-colors duration-200;
+}
+
+.signatures-list .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  @apply bg-silver-blue-400/50;
+}
+
+/* Animation on Load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signatures-list tbody tr {
+  animation: fadeInUp 0.4s ease-out backwards;
+}
+
+.signatures-list tbody tr:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.signatures-list tbody tr:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.signatures-list tbody tr:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.signatures-list tbody tr:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.signatures-list tbody tr:nth-child(n+5) {
+  animation-delay: 0.25s;
+}
+
