@@ -2,6 +2,8 @@
 
 Une plateforme sécurisée qui intègre des signatures d'images uniques et résistantes à la compression lors du téléchargement. Les utilisateurs authentifiés peuvent signer des images et vérifier ultérieurement leur paternité via une fonctionnalité dédiée. Le système garantit une authentification forte, la confidentialité des données, et maintient la qualité d'image tout en permettant une identification fiable basée sur la signature intégrée.
 
+➡️ **Vidéo de la présentation :** https://youtu.be/06d_SbNxod8
+
 ## 📋 Table des matières
 
 - [Fonctionnalités](#-fonctionnalités)
